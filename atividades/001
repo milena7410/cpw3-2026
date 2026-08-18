@@ -1,0 +1,43 @@
+Para cada exercício crie outro arquivo server rodando em outra porta
+
+1)
+
+const filmes = [
+  { id: 1, titulo: "A Origem", ano: 2010, nota: 10 },
+  { id: 2, titulo: "A Familia do Futuro", ano: 2007, nota: 9 },
+  { id: 3, titulo: "Homem-Aranha", ano: 2002, nota: 8 },
+  { id: 4, titulo: "Interestelar", ano: 2014, nota: 10 },
+  { id: 5, titulo: "Click", ano: 2006, nota: 9 }
+];
+
+GET /filmes → listar todos
+GET /filmes/:id → buscar por id
+GET /bem-avaliados → nota >= 9
+GET /filmes/ano/:ano → buscar por ano
+2)
+
+const musicas = [
+  { id: 1, titulo: "Dark Red", artista: "Steve Lacy", nota: 10 },
+  { id: 2, titulo: "Instant Crush", artista: "Daft Punk", nota: 9 },
+  { id: 3, titulo: "Chop Suey!", artista: "System of a Down", nota: 8 },
+  { id: 4, titulo: "Backstage", artista: "Matuê", nota: 7 }
+];
+
+GET /musicas → listar todas
+GET /musicas/:id → buscar por id
+GET /artista/:nome → listar músicas daquele artista
+GET /top → nota >= 9
+3)
+
+const produtos = [
+  { id: 1, nome: "Notebook", preco: 3500 },
+  { id: 2, nome: "Mouse", preco: 80 },
+  { id: 3, nome: "Teclado", preco: 150 },
+  { id: 4, nome: "Monitor", preco: 1200 }
+];
+
+GET /produtos
+GET /produtos/:id
+GET /caros → preco > 1000
+GET /baratos → preco < 200
+subir pro seu github e enviar o link do seu repositório

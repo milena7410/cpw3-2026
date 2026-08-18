@@ -1,0 +1,99 @@
+Os dados iniciais devem ser criados pelo aluno OU cadastrados via POST
+Requisitos para envio:
+
+Todas as rotas implementadas (código)
+
+Testes realizados no Postman (prints)
+
+1) API DE JOGADORES DE FUTEBOL
+
+Estrutura dos dados:
+Cada jogador deve possuir:
+
+id
+
+nome
+
+time
+
+gols
+
+Rotas obrigatórias:
+
+GET /jogadores → listar todos os jogadores
+
+GET /jogadores/:id → buscar jogador por id
+
+POST /jogadores → cadastrar novo jogador
+
+PUT /jogadores/:id → atualizar jogador
+
+DELETE /jogadores/:id → remover jogador
+
+GET /jogadores/artilheiros → retornar jogadores com gols maiores ou iguais a 10
+
+2) – API DE PEDIDOS DE LANCHONETE
+
+Estrutura dos dados:
+Cada pedido deve possuir:
+
+id
+
+cliente
+
+lanche
+
+quantidade
+
+Rotas obrigatórias:
+
+GET /pedidos → listar todos os pedidos
+
+GET /pedidos/:id → buscar pedido por id
+
+POST /pedidos → cadastrar novo pedido
+
+PUT /pedidos/:id → atualizar pedido
+
+DELETE /pedidos/:id → remover pedido
+
+GET /pedidos/grandes → retornar pedidos com quantidade maior ou igual a 3
+
+Regras:
+
+A quantidade deve ser maior que zero
+
+3) API DE PETS
+
+Estrutura dos dados:
+Cada pet deve possuir:
+
+id
+
+nome
+
+especie
+
+idade
+
+Rotas obrigatórias:
+
+GET /pets → listar todos os pets
+
+GET /pets/:id → buscar pet por id
+
+POST /pets → cadastrar novo pet
+
+PUT /pets/:id → atualizar pet
+
+DELETE /pets/:id → remover pet
+
+GET /pets/filhotes → retornar pets com idade menor ou igual a 2
+
+GET /pets/especie/:tipo → retornar pets por espécie
+
+OBSERVAÇÕES:
+
+O id deve ser único para cada registro
+Validar dados antes de cadastrar ou atualizar
+Retornar mensagem de erro quando o id não existir
