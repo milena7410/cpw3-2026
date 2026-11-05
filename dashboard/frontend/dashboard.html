@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Protegido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bem-vindo ao Dashboard!</h1>
+    <p>Se você está vendo isso, sua sessão está ativa.</p>
+    
+
+    <h2>Lista de Produtos</h2>
+    <!--btn modal - add novo item -->
+    <button id="btn-abrir-modal">+ Cadastrar Novo Produto</button>
+    <br><br>
+    <!-- add input de pesquisa -->
+    <label for="input-busca">Pesquisar produto: </label>
+    <input type="text" id="input-busca" placeholder="Digite para filtrar...">
+    <br><br>
+    <table border="1" id="tabela-produtos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Preço (R$)</th>
+                <th>Quantidade</th>
+                <th>Deletar</th> <!-- add btn delete -->
+
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+<br>
+
+<div id="exportar">
+<label>Exportar pdf:</label>
+    <a href="/api/produtos/pdf">
+        <button id="exportar" style= "background-color: rgb(13, 6, 99); border: none; cursor: pointer;;
+;">
+        <img width="36" height="36" src="https://img.icons8.com/arcade/64/pdf.png" alt="pdf"/>   </a>
+   </div>
+<br>
+<br>
+<a href="/logout"><button>Sair do Sistema</button></a>
+
+
+    <!-- telinha modal -->
+    <dialog id="modal-produto">
+    <h3>Novo Produto</h3>
+    <form action="/api/produtos/novo" method="POST">
+        <input type="text" name="nome" placeholder="Nome" required><br><br>
+        <input type="number" name="preco" placeholder="Preço" required><br><br>
+        <input type="number" name="quantidade" placeholder="Quantidade" required><br><br>
+        
+        <button type="submit">Salvar</button>
+        <button type="button" id="btn-fechar">Cancelar</button>
+    </form>
+    </dialog>
+
+ <script src="script.js"></script>
+</body>
+</html>

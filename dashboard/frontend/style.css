@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(13, 6, 99);
+    color: aliceblue;
+}
+label{
+    color: white;
+}
+#exportar{
+    display: flex;
+    align-self: center;
+    align-items: center;
+
+
+}
